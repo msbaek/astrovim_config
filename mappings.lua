@@ -23,7 +23,6 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>a"] = { "<cmd>echo 'Hello There'<cr>", desc = "Say Hello" },
     ["<Tab>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
@@ -32,10 +31,11 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
-    ["<leader>fj"] = { ":se ft=java<cr>" },
     ["<leader>fs"] = { "<cmd>set ft=sql<cr>" },
+    ["<leader>fd"] = { "<cmd>set ft=markdown<cr>" },
     ["<leader>fj"] = { "<cmd>set ft=java<cr>" },
-    ["<C-a>"] = { "ggVG", desc = "select all" },
+    ["<leader>ft"] = { "<cmd>set ft=typescript<cr>" },
+    ["<leader>a"] = { "ggVG", desc = "select all" },
   },
   -- t terminal
   t = {
